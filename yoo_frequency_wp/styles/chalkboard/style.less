@@ -1,0 +1,95 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Gudea';
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC';
+
+// theme: Frequency - charlkboard
+
+//
+// Typography
+//
+
+@global-link-color:                     #e56193;
+@global-link-hover-color:               #bb3e71;
+
+//
+// Buttons, Navs & Badges
+///
+
+@global-primary-background:             #e56193;
+@global-success-background:             #4cc198;
+@global-danger-background:              #c71d4d;
+
+//
+// Base
+//
+
+@base-body-font-family:                 'Gudea';
+@base-heading-font-family:              'Amatic SC';
+@base-code-border:                      #bb3e71;
+
+@base-h1-font-size:                     round(@global-font-size * 3.46); // 52px
+@base-h1-line-height:                   round(@base-h1-font-size * 1.1); // 48px
+@base-h2-font-size:                     round(@global-font-size * 2.93); // 44px
+@base-h2-line-height:                   round(@base-h2-font-size * 1.1); // 40px
+@base-h3-font-size:                     round(@global-font-size * 2.4); // 36px
+@base-h3-line-height:                   round(@base-h3-font-size * 1.1); // 32px
+@base-h4-font-size:                     round(@global-font-size * 1.86); // 28px
+@base-h4-line-height:                   round(@base-h4-font-size * 1.16); // 24px
+@base-h5-font-size:                     round(@global-font-size * 1.33); // 20px
+@base-h5-line-height:                   round(@base-h4-font-size * 1.1); // 22px
+
+//
+// Dropdown
+//
+
+@dropdown-background:                   darken(@global-dark-background, 10%);
+@dropdown-navbar-background:            darken(@global-dark-background, 10%);
+@dropdown-border-color:                 darken(@global-dark-background, 10%);
+
+//
+// Nav
+//
+
+@nav-header-font-size:                  round(@global-font-size * 1.6); // 24px
+
+//
+// Navbar
+//
+
+@navbar-font-size:                      round(@global-font-size * 2.13); // 32px
+@navbar-nav-padding-horizontal:         29px;
+
+//
+// Panel
+//
+
+@panel-box-secondary-background:        darken(@global-dark-background, 10%);
+
+
+// Internal Global variables
+// ==========================================================================
+
+@global-style:                          'chalkboard';
+
+
+// Internal Component variables
+// ==========================================================================
+
+@internal_panel-box-border-repeat:      round;
+
+
+// Theme Variables
+// ==========================================================================
+
+//
+// Parallax
+//
+
+@theme_global-parallax-style:           'chalkboard';
+
+//
+// Headerbar
+//
+
+@theme_headerbar-font-size:             round(@global-font-size * 1.6); // 24px

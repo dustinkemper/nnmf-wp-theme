@@ -1,0 +1,26 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Description List component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@description-list-line-border:                          rgba(0,0,0,0);
+@description-list-line-color:                           @global-muted-color;
+
+
+
+/* Modifier: `uk-description-list-line`
+ ========================================================================== */
+
+.hook-description-list-misc() {
+    .uk-description-list-line > dt:nth-child(n+2) {
+        background-image: url('@{global-image-path}/list_line.png');
+        background-position: 0 0;
+        background-repeat: repeat-x;
+    }
+}

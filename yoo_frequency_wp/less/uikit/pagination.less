@@ -1,0 +1,60 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Pagination component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@pagination-line-height:                    @global-line-height;
+@pagination-background:                     #fff;
+@pagination-color:                          @global-color;
+@pagination-hover-color:                    @global-color;
+@pagination-onclick-color:                  @global-color;
+@pagination-active-background:              @global-primary-background;
+@pagination-active-color:                   @global-contrast-color;
+@pagination-disabled-background:            #fff;
+@pagination-disabled-color:                 @global-muted-color;
+
+
+// Component
+// ==========================================================================
+
+.hook-pagination-item() { border-radius: @global-border-radius; }
+
+
+// Items
+// ==========================================================================
+
+.hook-pagination-link() { 
+    background-image: url('@{global-image-path}/grunge_bg.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.hook-pagination-link-hover() {}
+
+.hook-pagination-link-active() {}
+
+//
+// Active
+//
+
+.hook-pagination-active() {
+    background-image: url('@{global-image-path}/grunge_bg_light.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+//
+// Disabled
+//
+
+.hook-pagination-disabled() { 
+    background-image: url('@{global-image-path}/grunge_bg.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}

@@ -1,0 +1,69 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Breadcrumb component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@breadcrumb-divider:                    "";
+@breadcrumb-disabled-color:             @global-muted-color;
+
+//
+// New
+//
+
+@breadcrumb-margin:                     @global-grid-gutter;
+@breadcrumb-margin-large:               @breadcrumb-margin + 10px;
+
+
+// Component
+// ==========================================================================
+
+.hook-breadcrumb() {
+    margin-bottom: @breadcrumb-margin;
+    padding: @panel-box-padding;
+    background: @panel-box-background;
+    border: @internal_panel-box-border-width solid @panel-box-background;
+    border-image-source: url('@{global-image-path}/@{global-style}/panel_box_border.png');
+    border-image-slice: @internal_panel-box-border-image-slice;
+    border-image-repeat: @internal_panel-box-border-repeat;
+    background-clip: padding-box;
+}
+
+/* Only large screens */
+@media (min-width: @breakpoint-xlarge) {
+
+    .uk-breadcrumb { margin-bottom: @breadcrumb-margin-large; }
+
+}
+
+
+// Items
+// ==========================================================================
+
+.hook-breadcrumb-divider() {
+    width: 8px;
+    height: 11px;
+    background: url('@{global-image-path}/breadcrumb.png') 0 0 no-repeat;
+    vertical-align: middle;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-breadcrumb-misc() {
+
+    /* Component
+     ========================================================================== */
+
+    /*
+     * RTL
+     */
+
+    html[dir="rtl"] .uk-breadcrumb > li:nth-child(n+2):before { background-image: url('@{global-image-path}/breadcrumb_rtl.png'); }
+}

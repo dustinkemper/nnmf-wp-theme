@@ -1,0 +1,202 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Panel component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@panel-title-margin-bottom:                     @global-margin;
+@panel-title-font-size:                         @base-h3-font-size;
+@panel-title-line-height:                       @base-h3-line-height;
+@panel-title-color:                             @global-color;
+@panel-title-text-transform:                    uppercase;
+@panel-box-padding:                             0;
+@panel-box-background:                          #fff;
+@panel-box-color:                               @global-color;
+@panel-box-title-color:                         @global-color;
+@panel-box-teaser-margin:                       -@internal_panel-box-border-width;
+@panel-box-badge-top:                           0;
+@panel-box-primary-background:                  @global-primary-background;
+@panel-box-primary-color:                       @global-contrast-color;
+@panel-box-primary-title-color:                 @global-contrast-color;
+@panel-box-secondary-background:                @global-dark-background;
+@panel-box-secondary-color:                     @global-contrast-color;
+@panel-box-secondary-title-color:               @global-contrast-color;
+@panel-header-title-border:                     rgba(0,0,0,0);
+@panel-header-title-color:                      @global-color;
+@panel-divider-gutter:                          @global-grid-gutter;
+@panel-divider-gutter-large:                    @global-grid-large-gutter;
+@panel-divider-border:                          rgba(0,0,0,0);
+
+//
+// New
+//
+
+@panel-box-large-padding:                       @panel-box-padding + 10px;
+@panel-box-large-badge-top:                     @panel-box-badge-top + 10px;
+@panel-box-large-badge-right:                   @panel-box-large-badge-top;
+@panel-box-primary-link-color:                  #444;
+@panel-box-primary-link-hover-color:            @global-link-hover-color;
+
+@panel-box-secondary-button-color:              @global-color;
+@panel-box-secondary-button-background:         #eee;
+
+@panel-box-large-teaser-margin:                 @panel-box-teaser-margin - 10px;
+
+//
+// Internal Component variables
+//
+
+@internal_panel-box-border-width:               30px;
+@internal_panel-box-border-image-slice:         30;
+@internal_panel-box-border-repeat:              repeat;
+
+
+// Component
+// ==========================================================================
+
+
+// Sub-object: `uk-panel-title`
+// ==========================================================================
+
+.hook-panel-title() {}
+
+
+// Sub-object: `uk-panel-badge`
+// ==========================================================================
+
+.hook-panel-badge() {
+    +.uk-panel-title { padding-right: 55px; }
+}
+
+
+// Modifier: `uk-panel-box`
+// ==========================================================================
+
+.hook-panel-box() {
+    border: @internal_panel-box-border-width solid @panel-box-background;
+    border-image-source: url('@{global-image-path}/@{global-style}/panel_box_border.png');
+    border-image-slice: @internal_panel-box-border-image-slice;
+    border-image-repeat: @internal_panel-box-border-repeat;
+    background-clip: padding-box;
+}
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {
+
+    border-color: @panel-box-primary-background;
+    border-image-source: url('@{global-image-path}/@{global-style}/panel_box_primary_border.png');
+
+    > a:not([class]),
+    > :not([class*='uk-nav']) a:not([class]) { color: @panel-box-primary-link-color; }
+
+    > a:not([class]):hover,
+    > :not([class*='uk-nav']) a:not([class]):hover { color: @panel-box-primary-link-hover-color; }
+
+    .uk-button-primary:not(.uk-button-success):not(.uk-button-danger)  {
+
+        background-color: @panel-box-secondary-button-background;
+        background-image: url('@{global-image-path}/grunge_bg.png');
+        color: @global-color;
+
+        &:hover,
+        &:focus { background-color: darken(@panel-box-secondary-button-background, 3%); }
+
+        &:active,
+        &.uk-active { background-color: darken(@panel-box-secondary-button-background, 7%); }
+
+    }
+
+}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {
+
+    border-color: @panel-box-secondary-background;
+    border-image-source: url('@{global-image-path}/@{global-style}/panel_box_secondary_border.png');
+
+    .uk-button:not(.uk-button-primary):not(.uk-button-success):not(.uk-button-danger) {
+
+        background-color: @panel-box-secondary-button-background;
+        color: @panel-box-secondary-button-color;
+
+        &:hover,
+        &:focus { background-color: darken(@panel-box-secondary-button-background, 3%); }
+
+        &:active,
+        &.uk-active { background-color: darken(@panel-box-secondary-button-background, 7%); }
+
+    }
+
+}
+
+// Modifier: `uk-panel-header`
+// ==========================================================================
+
+.hook-panel-header() {
+
+    &.uk-panel-title:after {
+        content: "";
+        display: block;
+        height: 10px;
+        margin-top: 20px;
+        background: url('@{global-image-path}/border_dashed_horizontal.png') 0 0 repeat-x;
+    }
+
+}
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {
+
+    /* Modifier: `uk-panel-box`
+     ========================================================================== */
+
+    /* Only large screens */
+    @media (min-width: @breakpoint-xlarge) {
+
+        .uk-panel-box { padding: @panel-box-large-padding; }
+
+        .uk-panel-box .uk-panel-badge {
+            top: @panel-box-large-badge-top;
+            right: @panel-box-large-badge-right;
+        }
+
+        .uk-panel-box .uk-panel-teaser { margin: @panel-box-large-teaser-margin @panel-box-large-teaser-margin @panel-box-teaser-margin-bottom @panel-box-large-teaser-margin; }
+
+    }
+
+    /*
+     * Nav in panel
+     */
+
+    .uk-panel-box > .uk-nav-side { margin: 0 -10px; }
+
+    /*
+     * Sub-modifier: `uk-panel-box-secondary`
+     */
+
+    .uk-panel-box-secondary .uk-panel-badge { background-image: url('@{global-image-path}/@{global-style}/badge_secondary.png'); }
+
+    /* Modifier: `uk-panel-divider`
+     ========================================================================== */
+
+    .uk-panel + .uk-panel-divider:before {
+        right: 0;
+        left: 0;
+        height: 10px;
+        background: url('@{global-image-path}/border_dashed_horizontal.png') 0 0 repeat-x;
+    }
+
+}

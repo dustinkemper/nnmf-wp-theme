@@ -1,0 +1,111 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Grid component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@grid-gutter-horizontal:                        @global-grid-gutter;
+@grid-gutter-vertical:                          @global-grid-gutter;
+@grid-gutter-large-horizontal:                  @global-grid-large-gutter;
+@grid-gutter-large-vertical:                    @global-grid-large-gutter;
+@grid-divider-border:                           rgba(0,0,0,0);
+
+
+// Component
+// ==========================================================================
+
+
+// Grid column
+// ==========================================================================
+
+
+// Sub-modifier: `uk-grid-margin`
+// ==========================================================================
+
+
+// Panel in grid
+// ==========================================================================
+
+
+// Large gutter
+// ==========================================================================
+
+
+// Sub-object: `uk-width-*`
+// ==========================================================================
+
+
+// Sub-object: `uk-push-*` and `uk-pull-*`
+// ==========================================================================
+
+// Miscellaneous
+// ========================================================================
+
+.hook-grid-misc() {
+
+    /* Modifier: `uk-grid-divider`
+     ========================================================================== */
+
+    /*
+     * Horizontal divider
+     * Does not work with `uk-push-*`, `uk-pull-*` and not if the columns float into the next row
+     */
+
+    /* Only tablets and desktop */
+    @media (min-width: @breakpoint-medium) {
+
+        .uk-grid-divider:not(.uk-grid-preserve):not(:empty) {
+            margin-left: -@grid-gutter-horizontal;
+            margin-right: -@grid-gutter-horizontal;
+        }
+
+        .uk-grid-divider:not(.uk-grid-preserve) > * {
+            padding-left: @grid-gutter-horizontal;
+            padding-right: @grid-gutter-horizontal - 5px;
+        }
+
+        .uk-grid-divider > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):nth-child(n+2) {
+            padding-left: @grid-gutter-horizontal + 5px;
+            background: url('@{global-image-path}/border_dashed_vertical.png') repeat-y;
+            background-position: 0 0;
+        }
+
+        .uk-grid-divider > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):last-child { padding-right: @grid-gutter-horizontal; }
+
+    }
+
+    /* Desktop and bigger */
+    @media (min-width: @breakpoint-large) {
+
+        .uk-grid-divider:not(.uk-grid-preserve):not(:empty) {
+            margin-left: -@grid-gutter-large-horizontal;
+            margin-right: -@grid-gutter-large-horizontal;
+        }
+
+        .uk-grid-divider:not(.uk-grid-preserve) > * {
+            padding-left: @grid-gutter-large-horizontal;
+            padding-right: @grid-gutter-large-horizontal - 5px;
+        }
+
+        .uk-grid-divider > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):nth-child(n+2) { padding-left: @grid-gutter-large-horizontal + 5px; }
+        .uk-grid-divider > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):last-child { padding-right: @grid-gutter-large-horizontal; }
+
+    }
+
+    /*
+     * Vertical divider
+     */
+
+    .uk-grid-divider:empty {
+        height: 10px;
+        margin-top: @grid-gutter-vertical;
+        margin-bottom: @grid-gutter-vertical;
+        background: url('@{global-image-path}/border_dashed_horizontal.png') 0 0 repeat-x;
+    }
+
+}

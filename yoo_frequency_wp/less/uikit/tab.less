@@ -1,0 +1,164 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Tab component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@tab-border:                        @global-border;
+@tab-color:                         @global-link-color;
+@tab-hover-color:                   @global-link-hover-color;
+@tab-active-border:                 @global-border;
+@tab-active-background:             @global-primary-background;
+@tab-active-color:                  @global-contrast-color;
+@tab-disabled-color:                @global-muted-color;
+
+
+// Component
+// ==========================================================================
+
+//
+// Items
+//
+
+.hook-tab() {
+    border-width: 0;
+    border-radius: @global-border-radius @global-border-radius 0 0;
+}
+
+// Hover
+.hook-tab-hover() {}
+
+// Active
+.hook-tab-active() {
+    background-image: url('@{global-image-path}/grunge_bg_light.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+// Disabled
+.hook-tab-disabled() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-tab-misc() {
+
+    /* Component
+     ========================================================================== */
+
+     .uk-tab { border-bottom-width: 2px; }
+
+    /*
+     * Items
+     */
+
+    .uk-tab > li { margin-bottom: -2px; }
+
+    /* Hover */
+
+    .uk-tab > li:not(.uk-active) > a:hover,
+    .uk-tab > li:not(.uk-active) > a:focus,
+    .uk-tab > li.uk-open:not(.uk-active) > a {
+        margin-bottom: 2px;
+        padding-bottom: @tab-padding-vertical - 2;
+    }
+
+    /* Modifier: 'tab-center'
+     ========================================================================== */
+
+    .uk-tab-center { border-bottom-width: 2px; }
+    .uk-tab-center-bottom { border-top-width: 2px; }
+
+
+    /* Modifier: 'tab-bottom'
+     ========================================================================== */
+
+    .uk-tab-bottom { border-top-width: 2px; }
+
+    .uk-tab-bottom > li { margin-top: -2px; }
+
+    .uk-tab-bottom > li > a  { border-radius: 0 0 @global-border-radius @global-border-radius; }
+
+    .uk-tab-bottom > li:not(.uk-active) > a:hover,
+    .uk-tab-bottom > li:not(.uk-active) > a:focus,
+    .uk-tab-bottom > li.uk-open:not(.uk-active) > a {
+        margin-top: 2px;
+        padding-top: @tab-padding-vertical - 2;
+    }
+
+    /* Modifier: 'tab-grid'
+     ========================================================================== */
+
+    .uk-tab-grid:before { 
+        bottom: -2px;
+        border-top-width: 2px;
+    }
+
+    /*
+     * If `uk-tab-bottom`
+     */
+
+    .uk-tab-grid.uk-tab-bottom:before { top: -2px; }
+
+
+    /* Modifier: 'tab-left', 'tab-right'
+     ========================================================================== */
+
+    /* Only tablets and desktops */
+    @media (min-width: @breakpoint-medium) {
+
+        /*
+         * Modifier: 'tab-left'
+         */
+
+        .uk-tab-left { border-right-width: 2px; }
+        .uk-tab-left > li { margin-right: -2px; }
+        .uk-tab-left > li > a { 
+            border-bottom-width: 0;
+            border-radius: @global-border-radius 0 0 @global-border-radius;
+        }
+        .uk-tab-left > li:not(.uk-active) > a:hover,
+        .uk-tab-left > li:not(.uk-active) > a:focus { 
+            margin-right: 2px;
+            padding-right: @tab-padding-horizontal - 2;
+        }
+
+        .uk-tab-left > li:not(.uk-active) > a:hover,
+        .uk-tab-left > li:not(.uk-active) > a:focus,
+        .uk-tab-left > li.uk-open:not(.uk-active) > a {
+            margin-bottom: 0;
+            padding-bottom: @tab-padding-vertical;
+        }
+
+        /*
+         * Modifier: 'tab-right'
+         */
+
+        .uk-tab-right { border-left-width: 2px; }
+        .uk-tab-right > li { margin-left: -2px; }
+        .uk-tab-right > li > a { 
+            border-bottom-width: 0;
+            border-radius: 0 @global-border-radius @global-border-radius 0;
+        }
+        .uk-tab-right > li:not(.uk-active) > a:hover,
+        .uk-tab-right > li:not(.uk-active) > a:focus {
+            margin-left: 2px;
+            padding-left: @tab-padding-horizontal - 2;
+        }
+
+        .uk-tab-right > li:not(.uk-active) > a:hover,
+        .uk-tab-right > li:not(.uk-active) > a:focus,
+        .uk-tab-right > li.uk-open:not(.uk-active) > a {
+            margin-bottom: 0;
+            padding-bottom: @tab-padding-vertical;
+        }
+
+    }
+
+}

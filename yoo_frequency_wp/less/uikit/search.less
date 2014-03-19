@@ -1,0 +1,81 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Search component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@search-width:                          @search-padding;
+@search-focus-width:                    150px;
+@search-height:                         @navbar-nav-height;
+@search-padding:                        45px;
+@search-color:                          @global-contrast-color;
+@search-placeholder-color:              rgba(0,0,0,0);
+@search-icon-color:                     @global-contrast-color;
+@search-close-color:                    @global-contrast-color;
+
+//
+// New
+//
+
+@search-icon-width:                     40px;
+@search-icon-background:                @global-primary-background;
+@search-close-width:                    30px;
+
+
+// Component
+// ==========================================================================
+
+.hook-search() {}
+
+.hook-search-icon() { 
+    width: @search-icon-width;
+    border-radius: @global-border-radius;
+    background-color: @search-icon-background;
+    background-image: url('@{global-image-path}/grunge_bg_light.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+
+// Sub-object `uk-search-field`
+// ==========================================================================
+
+.hook-search-field() {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hook-search-field-focus() {
+    padding: 0 0 0 @search-padding;
+}
+
+
+// Sub-object `uk-search-close`
+// ==========================================================================
+
+.hook-search-close() { 
+    z-index: 2;
+    width: @search-close-width;
+}
+
+// Miscellaneous
+// ========================================================================
+
+.hook-search-misc() {
+
+    /* Sub-object `uk-search-field`
+     ========================================================================== */
+
+    .uk-search-field:focus,
+    .uk-active .uk-search-field {
+        padding: 0 @search-close-width 0 @search-padding;
+        cursor: text;
+    }
+}

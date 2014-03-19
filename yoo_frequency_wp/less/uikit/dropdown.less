@@ -1,0 +1,106 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Dropdown component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dropdown-z-index:                          (@global-z-index + 20);
+@dropdown-width:                            230px;
+@dropdown-padding:                          36px;
+@dropdown-background:                       @global-dark-background;
+@dropdown-color:                            @global-contrast-color;
+@dropdown-divider-border:                   rgba(0,0,0,0);
+@dropdown-small-padding:                    16px;
+@dropdown-navbar-background:                @global-dark-background;
+@dropdown-navbar-color:                     @global-contrast-color;
+@dropdown-search-background:                @global-dark-background;
+@dropdown-search-color:                     @global-color;
+@dropdown-search-navbar-margin-top:         ((@navbar-nav-height - @search-height) / 2);
+@dropdown-search-navbar-margin-right:       -@navbar-nav-padding-horizontal;
+
+//
+// New
+//
+
+@dropdown-border-color:                     @global-dark-background;
+
+
+// Component
+// ==========================================================================
+
+.hook-dropdown() {
+    border-width: 4px;
+    border-color: @dropdown-border-color;
+    border-style: solid;
+    border-image-source: url('@{global-image-path}/@{global-style}/dropdown_border.png');
+    border-image-slice: 4;
+    border-image-repeat: round;
+    background-image: url('@{global-image-path}/dropdown_bg.png');
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-repeat: repeat;
+}
+
+
+// Modifier: `uk-dropdown-navbar`
+// ==========================================================================
+
+.hook-dropdown-navbar() {
+    border-width: 4px;
+    border-style: solid;
+    border-image-source: url('@{global-image-path}/@{global-style}/dropdown_border.png');
+    border-image-slice: 4;
+    border-image-repeat: round;
+    background-image: url('@{global-image-path}/dropdown_bg.png');
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-repeat: repeat;
+}
+
+
+// Modifier: `uk-dropdown-search`
+// ==========================================================================
+
+.hook-dropdown-search() {
+    background-image: url('@{global-image-path}/dropdown_bg.png');
+    background-clip: padding-box;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dropdown-misc() {
+    
+    /* Dependencies `uk-nav-dropdown`
+     ========================================================================== */
+
+    .uk-dropdown .uk-nav-dropdown,
+    .uk-dropdown .uk-nav-navbar { padding: 0 @dropdown-padding - 15px; }
+
+    .uk-dropdown .uk-nav { margin: -10px -@dropdown-padding; }
+
+    /* Grid and panel in dropdown
+     ========================================================================== */
+
+    /* Only tablets and desktops */
+    @media (min-width: @breakpoint-medium) {
+
+        /*
+         * Column divider
+         */
+
+        .uk-dropdown:not(.uk-dropdown-stack) > .uk-grid > [class*='uk-width-']:nth-child(n+2) {
+            padding-left: @dropdown-padding + 10px; 
+            background: url('@{global-image-path}/border_dashed_light_vertical.png') repeat-y;
+            background-position: 0 0;
+        }
+
+    }
+
+}

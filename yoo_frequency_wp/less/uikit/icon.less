@@ -1,0 +1,54 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Icon component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@icon-button-width:                         50px;
+@icon-button-height:                        @icon-button-width;
+@icon-button-background:                    @global-primary-background;
+@icon-button-font-size:                     round(@icon-button-width * 0.5);
+@icon-button-color:                         @global-contrast-color;
+@icon-button-hover-background:              darken(@icon-button-background, 3%);
+@icon-button-hover-color:                   @global-contrast-color;
+@icon-button-active-background:             darken(@icon-button-background, 7%);
+@icon-button-active-color:                  @global-contrast-color;
+
+
+// Component
+// ==========================================================================
+
+
+// Modifier: `uk-icon-button`
+// ==========================================================================
+
+.hook-icon-button() {
+    position: relative;
+    background-image: url('@{global-image-path}/grunge_bg_light.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+    transition: all 0.1s ease-in-out;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width:  42px;
+        height: 42px;
+        top: 2px;
+        left: 2px;
+        border: 2px solid #fff;
+        border-radius: 50%
+    }
+
+}
+
+// Hover
+.hook-icon-button-hover() { box-shadow: 0 1px 7px rgba(0,0,0,0.2) inset; }
+
+// Active
+.hook-icon-button-active() {}

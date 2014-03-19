@@ -1,0 +1,81 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Article component
+//
+// ==========================================================================
+
+
+// Variables
+// ========================================================================
+
+@article-margin-top:                    @global-grid-gutter;
+@article-title-font-size:               round(@global-font-size * 2.57);
+@article-title-line-height:             round(@article-title-font-size * 1.16);
+@article-title-text-transform:          uppercase;
+@article-meta-font-size:                round(@global-font-size * 0.8);
+@article-meta-line-height:              round(@article-meta-font-size * 1.2);
+@article-meta-color:                    @global-color;
+@article-lead-color:                    @global-color;
+@article-lead-font-size:                round(@global-font-size * 1.28);
+@article-lead-line-height:              round(@article-lead-font-size * 1.33);
+@article-divider-margin:                @global-large-margin;
+@article-divider-border:                rgba(0,0,0,0);
+
+//
+// New
+//
+
+@article-margin-large-top:              @article-margin-top + 10px;
+
+
+// Component
+// ==========================================================================
+
+.uk-article {
+    position: relative;
+    padding: @panel-box-padding;
+    background: @panel-box-background;
+    border: @internal_panel-box-border-width solid @panel-box-background;
+    border-image-source: url('@{global-image-path}/@{global-style}/panel_box_border.png');
+    border-image-slice: @internal_panel-box-border-image-slice;
+    border-image-repeat: @internal_panel-box-border-repeat;
+    background-clip: padding-box;
+}
+
+/* Only large screens */
+@media (min-width: @breakpoint-xlarge) {
+
+    .uk-article { 
+        padding: @panel-box-large-padding;
+        +.uk-article { margin-top: @article-margin-large-top; }
+    }
+
+}
+
+
+// Sub-object `uk-article-title`
+// ==========================================================================
+
+.hook-article-title() {}
+
+
+// Sub-object `uk-article-meta`
+// ==========================================================================
+
+.hook-article-meta() {}
+
+
+// Sub-object `uk-article-lead`
+// ==========================================================================
+
+.hook-article-lead() {}
+
+
+// Sub-object `uk-article-divider`
+// ==========================================================================
+
+.hook-article-divider() {
+    height: 10px;
+    background: url('@{global-image-path}/border_dashed_horizontal.png') 0 0 repeat-x;
+}

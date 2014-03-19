@@ -1,0 +1,103 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Julius+Sans+One';
+
+// theme: Frequency - bokeh
+
+//
+// Typography
+//
+
+@global-link-color:                         #d1382c;
+@global-link-hover-color:                   #9c2118;
+
+//
+// Buttons, Navs & Badges
+//
+
+@global-primary-background:                 #d1382c;
+@global-success-background:                 #83ae4e;
+@global-danger-background:                  #a21f1f;
+
+//
+// Base
+//
+
+@base-body-font-family:                     'Trebuchet MS', Verdana, Arial, sans-serif;
+@base-heading-font-family:                  'Julius Sans One';
+@base-code-border:                          #b42929;
+
+@base-h1-font-size:                         round(@global-font-size * 2.4); // 36px
+@base-h1-line-height:                       round(@base-h1-font-size * 1.1); // 40px
+@base-h2-font-size:                         round(@global-font-size * 1.86); // 28px
+@base-h2-line-height:                       round(@base-h2-font-size * 1.14); // 32px
+@base-h3-font-size:                         round(@global-font-size * 1.3); // 20px
+@base-h3-line-height:                       round(@base-h3-font-size * 1.2); // 24px
+@base-h4-font-size:                         round(@global-font-size * 1.06); // 16px
+@base-h4-line-height:                       round(@base-h4-font-size * 1.25); // 20px
+@base-h5-font-size:                         round(@global-font-size * 0.8); // 12px
+@base-h5-line-height:                       round(@base-h4-font-size * 1.16); // 14px
+
+//
+// Nav
+//
+
+@nav-header-font-size:                      round(@global-font-size * 1.06); // 16px
+
+@nav-search-active-color:                   #b42929;
+@nav-search-nested-hover-color:             #b42929;
+@nav-dropdown-nested-hover-color:           #b42929;
+@nav-navbar-nested-hover-color:             #b42929;
+@nav-dropdown-active-color:                 #b42929;
+@nav-navbar-active-color:                   #b42929;
+
+//
+// Navbar
+//
+
+@navbar-font-size:                          round(@global-font-size * 1.06); // 16px
+@navbar-nav-padding-horizontal:             26px;
+
+//
+// Panel
+//
+
+@panel-box-badge-top:                       26px;
+@panel-box-padding:                         26px;
+@panel-box-teaser-margin:                   -(@internal_panel-box-border-width + @panel-box-padding);
+
+
+// Internal Global variables
+// ==========================================================================
+
+@global-style:                              'bokeh';
+
+
+// Internal Component variables
+// ==========================================================================
+
+@internal_panel-box-border-width:           4px;
+@internal_panel-box-border-image-slice:     4;
+@internal_panel-box-border-repeat:          round;
+
+
+// Theme Variables
+// ==========================================================================
+
+//
+// Parallax
+//
+
+@theme_global-parallax-style:               'bokeh';
+
+//
+// Article
+//
+
+@theme_article-date-top:                    -29px;
+
+//
+// Headerbar
+//
+
+@theme_headerbar-font-size:                 round(@global-font-size * 0.93); // 14px;

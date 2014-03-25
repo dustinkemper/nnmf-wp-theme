@@ -7346,10 +7346,10 @@ a:hover {
  * Block Divider
  */
 .tm-block-divider-light {
-  background: url("../../../images/block_divider_light.png") 0 0 repeat-x;
+  background: url("../../../images/block_divider_light-nnmf.png") 0 0 repeat-x;
 }
 .tm-block-divider-dark {
-  background: url("../../../images/block_divider_dark.png") 0 0 repeat-x;
+  background: url("../../../images/block_divider_dark-nnmf.png") 0 0 repeat-x;
 }
 .tm-block-divider-light,
 .tm-block-divider-dark {

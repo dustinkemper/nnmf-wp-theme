@@ -1859,7 +1859,7 @@ ul.uk-nav-sub {
 .uk-nav-side > li > a {
   color: #444444;
   padding: 10px;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
 }
 /*
  * Hover
@@ -1877,7 +1877,7 @@ ul.uk-nav-sub {
 .uk-nav-side > li.uk-active > a {
   background: #4a4a4a;
   color: #ffffff;
-  background-image: url("../../../less/uikit/images/grunge_bg_light.png");
+  /*background-image: url("../../../less/uikit/images/grunge_bg_light.png");*/
 }
 .uk-nav-side > li.uk-active > a:hover {
   background-color: #f2726b;
@@ -1894,8 +1894,8 @@ ul.uk-nav-sub {
  * Sub-object: `uk-nav-divider`
  */
 .uk-nav-side .uk-nav-divider {
-  border-top: 1px solid rgba(0, 0, 0, 0);
-  background-image: url("../../../less/uikit/images/border_dashed_horizontal.png");
+  border-top: 1px solid rgba(256, 256, 256, .75);
+  /*background-image: url("../../../less/uikit/images/border_dashed_horizontal.png");*/
 }
 /*
  * Nested items

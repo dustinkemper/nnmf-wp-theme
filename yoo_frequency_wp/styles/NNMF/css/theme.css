@@ -2309,7 +2309,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
   background-color: rgba(0, 0, 0, 0);
-  color: #f2726b;
+  color: #55075e;
 }
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */

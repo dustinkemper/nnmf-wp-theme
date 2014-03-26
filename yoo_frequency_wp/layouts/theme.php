@@ -66,7 +66,7 @@ include($this['path']->path('layouts:theme.config.php'));
 		<?php endif; ?>
 
 		<?php if ($this['widgets']->count('menu + search')) : ?>
-		<nav class="tm-navbar uk-navbar">
+		<nav class="tm-navbar uk-navbar" data-uk-sticky>
 
 			<?php if ($this['widgets']->count('menu')) : ?>
 			<?php echo $this['widgets']->render('menu'); ?>

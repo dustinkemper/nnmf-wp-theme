@@ -1861,6 +1861,21 @@ ul.uk-nav-sub {
   padding: 10px;
   /*border-radius: 3px;*/
 }
+
+/* custom sticky nav-side*/
+
+ul.uk-sticky-sidenav > li > a {
+  background-color: #fff;
+  color: #444;
+  padding: 10px;
+}
+
+ul.uk-sticky-sidenav > li > a:hover {
+  background-color: #ff4450;
+  color: #fff;
+  padding: 10px;
+}
+
 /*
  * Hover
  * 1. Apply hover style also to focus state
@@ -2387,7 +2402,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
  ========================================================================== */
 .uk-navbar-toggle {
   font-size: 19px;
-  color: #ffffff;
+  color: #444444;
 }
 /*
  * 1. Apply hover style also to focus state
@@ -2395,7 +2410,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
  */
 .uk-navbar-toggle:hover,
 .uk-navbar-toggle:focus {
-  color: #ffffff;
+  color: #ff4450;
   text-decoration: none;
   /* 2 */
   outline: none;
@@ -7288,7 +7303,6 @@ a:hover {
 @media (min-width: 767px) {
   .uk-article {
     padding: 36px;
-    background: rgba(256, 256, 256, .75);
   }
   .uk-article + .uk-article {
     margin-top: 40px;
@@ -7416,6 +7430,7 @@ a:hover {
  */
 .uk-navbar-toggle {
   padding: 0 10px;
+  color: #444444;
 }
 /*
  * Main
@@ -7630,10 +7645,10 @@ body {
 @media (max-width: 767px) {
   .tm-bg-noparallax,
   body {
-    background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 204, color-stop(0%, #ff4450), color-stop(100%, #56085e));
-    background-image: -webkit-radial-gradient(center top, 90% 90%, #ff4450 0%, #56085e 100%);
-    background-image: -moz-radial-gradient(center top, 90% 90%, #ff4450 0%, #56085e 100%);
-    background-image: radial-gradient(90% 90% at center top, #ff4450 0%, #56085e 100%);
+    background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 204, color-stop(0%, #593A75), color-stop(100%, #A7606E));
+    background-image: -webkit-radial-gradient(center top, 90% 90%, #593A75 0%, #A7606E 100%);
+    background-image: -moz-radial-gradient(center top, 90% 90%, #593A75 0%, #A7606E 100%);
+    background-image: radial-gradient(90% 90% at center top, #593A75 0%, #A7606E 100%);
   }
 }
 /* Only tablets and desktop */

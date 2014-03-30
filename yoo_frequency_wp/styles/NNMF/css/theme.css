@@ -2149,7 +2149,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
 }
 /* Active */
 .uk-nav-dropdown > .uk-active > a {
-  color: #c64f49;
+  color: #fff;
 }
 /* Modifier `uk-nav-navbar`
      ========================================================================== */
@@ -2176,7 +2176,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
 }
 /* Active */
 .uk-nav-navbar > .uk-active > a {
-  color: #c64f49;
+  color: #fff;
 }
 /* Modifier `uk-nav-search`
      ========================================================================== */
@@ -6172,7 +6172,7 @@ input.uk-search-field {
   /* 5 */
   font-size: 1rem;
   vertical-align: top;
-  border-width: 4px;
+  /*border-width: 4px;
   border-color: #4a4a4a;
   border-style: solid;
   border-image-source: url("../../../less/uikit/images/bridge/dropdown_border.png");
@@ -6181,7 +6181,7 @@ input.uk-search-field {
   background-image: url("../../../less/uikit/images/dropdown_bg.png");
   background-position: 50% 50%;
   background-clip: padding-box;
-  background-repeat: repeat;
+  background-repeat: repeat;*/
 }
 /*
  * 1. Show dropdown
@@ -6314,9 +6314,9 @@ input.uk-search-field {
  ========================================================================== */
 .uk-dropdown-navbar {
   margin-top: 0;
-  background: #4a4a4a;
+  background: #56085e;
   color: #ffffff;
-  border-width: 4px;
+ /* border-width: 4px;
   border-style: solid;
   border-image-source: url("../../../less/uikit/images/bridge/dropdown_border.png");
   border-image-slice: 4;
@@ -6324,7 +6324,7 @@ input.uk-search-field {
   background-image: url("../../../less/uikit/images/dropdown_bg.png");
   background-position: 50% 50%;
   background-clip: padding-box;
-  background-repeat: repeat;
+  background-repeat: repeat;*/
 }
 .uk-open > .uk-dropdown-navbar {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
@@ -6337,8 +6337,8 @@ input.uk-search-field {
   margin-top: 0;
   background: #4a4a4a;
   color: #444444;
-  background-image: url("../../../less/uikit/images/dropdown_bg.png");
-  background-clip: padding-box;
+  /*background-image: url("../../../less/uikit/images/dropdown_bg.png");
+  background-clip: padding-box;*/
 }
 .uk-open > .uk-dropdown-search {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;

@@ -2,6 +2,30 @@
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+@font-face {
+  font-family: 'nexa_boldregular';
+  src: url('../../../fonts/nexa-bold-webfont.eot');
+  src: url('../../../fonts/nexa-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../../fonts/nexa-bold-webfont.woff') format('woff'),
+       url('../../../fonts/nexa-bold-webfont.ttf') format('truetype'),
+       url('../../../fonts/nexa-bold-webfont.svg#nexa_boldregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'nexa_lightregular';
+  src: url('../../../fonts/nexa-light-webfont.eot');
+  src: url('../../../fonts/nexa-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../../fonts/nexa-light-webfont.woff') format('woff'),
+       url('../../../fonts/nexa-light-webfont.ttf') format('truetype'),
+       url('../../../fonts/nexa-light-webfont.svg#nexa_lightregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* ========================================================================
    Component: Normalize
  ========================================================================== */
@@ -354,7 +378,7 @@ html {
 }
 body {
   background: #ffffff;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: normal;
   line-height: 24px;
   color: #444444;
@@ -500,7 +524,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 15px 0;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #444444;
   text-transform: uppercase;
@@ -1812,7 +1836,7 @@ a:hover {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 22px;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 .uk-nav-header:not(:first-child) {
   margin-top: 15px;
@@ -2247,7 +2271,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
   background-position: 0 0;*/
   color: #333;
   text-transform: uppercase;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 .uk-navbar .uk-navbar-nav > li:first-child > a {
@@ -2297,7 +2321,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
   /* 2 */
   color: #fff;
   font-size: 16px;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: 'nexa_boldregular', "Montserrat", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 /* Appear not as link */
@@ -3640,18 +3664,6 @@ select.uk-form-width-mini {
   background-repeat: repeat;*/
   transition: all 0.1s ease-in-out;
 }
-
-.ticket {
-  background-color: #56085e;
-  color: #fff;
-  border-radius: 3px;
-}
-
-.ticket:hover {
-  color: #ff4450;
-}
-
-
 /*
  * Hover
  * 1. Apply hover style also to focus state
@@ -7404,9 +7416,9 @@ a:hover {
 }
 .tm-headerbar-text {
   color: #ffffff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', 'Montserrat', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 20px;
 }
 .tm-headerbar-l + .tm-logo,
 .tm-logo + .tm-headerbar-r,
@@ -7569,7 +7581,7 @@ a:hover {
     left: -29px;
     padding-top: 20px;
     /*background: url("../../../images/bridge/article_date_bg.svg") 0 0 no-repeat;*/
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
   }
   .tm-isblog .tm-article-date:before {
     content: '';
@@ -7784,7 +7796,7 @@ body .wk-slideset-frequency .overlay > div {
   background: rgba(242, 114, 107, 0.9);
 }
 .wk-slideset-frequency .overlay p:first-child {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 .wk-slideset-frequency:hover > div .next,
 .wk-slideset-frequency:hover > div .prev,

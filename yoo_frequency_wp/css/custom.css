@@ -48,3 +48,9 @@
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
+
+.mejs-container {
+  margin: 0 auto;
+}
+
+

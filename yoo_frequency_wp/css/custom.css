@@ -52,6 +52,7 @@
   background-color: #56085e;
   border: 1px solid;
   border-radius: 3px;
+  box-shadow: 0 0 10px 4px #ff4450;
   color: #ff4450;
   text-transform: uppercase;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -64,7 +65,7 @@
 .uk-navbar .uk-navbar-nav > li.ticket > a:hover {
   padding-right: 14px;
   background-color: #ff4450;
-  /*box-shadow: 0 1px 10px #ff4450 inset;*/
+  box-shadow: 0 0 10px 4px #fff;
   color: #fff;
   text-transform: uppercase;
   /*text-shadow: 0 0 2px #fff;*/

@@ -7,6 +7,10 @@
   margin: 0 auto;
 }
 
+.sponsor img {
+  height: 40px;
+}
+
 .uk-sticky{z-index:9999; }
 
 .uk-sticky nav {  

@@ -2255,29 +2255,22 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
    Component: Navbar
  ========================================================================== */
 .uk-navbar {
-  background: rgba(255,255,255,1);
+  /*background: rgba(255,255,255,1);*/
   /*background: #56085e;
   background-image: url("../../../less/uikit/images/NNMF/panel_box_border_nnmf.png");*/
-  color: #333;
+  color: #fff;
   padding: 30px;
-  border-bottom: 1px solid #ececec;
-  /*border: 30px solid transparent;
-  border-image-source: url("../../../less/uikit/images/navbar_border.png");
-  border-image-slice: 30;
-  border-image-repeat: repeat;
-  background-clip: padding-box;*/
 }
+
 .uk-navbar .uk-navbar-nav > li > a {
-  padding-right: 14px;
-  /*background: url("../../../less/uikit/images/border_dashed_light_vertical.png") repeat-y;
-  background-position: 0 0;*/
-  color: #333;
+  /*padding-right: 14px;*/
+  color: #fff;
   text-transform: uppercase;
   font-family: 'nexa_boldregular', 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 .uk-navbar .uk-navbar-nav > li:first-child > a {
-  background: none;
+  /*background: none;*/
 }
 /*
  * Micro clearfix
@@ -2317,9 +2310,8 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
   box-sizing: border-box;
   text-decoration: none;
   /* 1 */
-  height: 40px;
   padding: 0 14px;
-  line-height: 45px;
+  line-height: 40px;
   /* 2 */
   color: #fff;
   font-size: 16px;
@@ -2339,20 +2331,37 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a:focus,
 .uk-navbar-nav > li.uk-open > a {
-  background-color: rgba(0, 0, 0, 0);
-  color: #f2726b;
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 3px;
+  color: #55075e;
   /* 3 */
   outline: none;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  background-color: rgba(0, 0, 0, 0);
-  color: #c64f49;
+  background-color: rgba(255, 255, 255, 1);
+  color: #55075e;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 3px;
   color: #55075e;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.uk-navbar-nav > li.uk-active > a:hover {
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 3px;
+  color: #55075e;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */
@@ -2406,7 +2415,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
  * Link colors
  */
 .uk-navbar-content > a:not([class]) {
-  color: #f2726b;
+  color: #ff4450;
 }
 .uk-navbar-content > a:not([class]):hover {
   color: #c64f49;
@@ -2432,7 +2441,7 @@ html[dir="rtl"] .uk-nav-parent-icon > .uk-parent > a:after {
  ========================================================================== */
 .uk-navbar-toggle {
   font-size: 19px;
-  color: #444444;
+  color: #fff;
 }
 /*
  * 1. Apply hover style also to focus state
@@ -7461,7 +7470,7 @@ a:hover {
  */
 .uk-navbar-toggle {
   padding: 0 10px;
-  color: #444444;
+  color: #fff;
 }
 /*
  * Main

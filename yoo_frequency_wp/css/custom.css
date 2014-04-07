@@ -3,10 +3,31 @@
 /* ========================================================================
    Use this file to add custom CSS easily
  ========================================================================== */
+.mejs-container {
+  margin: 0 auto;
+}
 
-.uk-sticky{z-index:9999}  
-.uk-sticky.uk-active nav{margin-top:0px;margin-bottom:0px;}  
+.uk-sticky{z-index:9999; }
+
+.uk-sticky nav {  
+  background: url("http://nnmf2014.blapproductions.com/wp-content/themes/yoo_frequency_wp/less/uikit/images/NNMF/panel_box_border_nnmf-t.png");
+  background-position: 0px -105px;
+  -moz-transition: background-position .6s ease-in-out;
+  -webkit-transition: background-position .6s ease-in-out;
+  transition: background-position .6s ease-in-out;
+}
+.uk-sticky.uk-active nav {
+  margin-top:0px;
+  margin-bottom:0px;
+  background-position: 0px 0px;
+  background: url("http://nnmf2014.blapproductions.com/wp-content/themes/yoo_frequency_wp/less/uikit/images/NNMF/panel_box_border_nnmf-t.png");
+  -moz-transition: background-position .6s ease-in-out;
+  -webkit-transition: background-position .6s ease-in-out;
+  transition: background-position .6s ease-in-out;
+}  
+
 .tm-navbar {z-index: 9999}
+
 .uk-sticky-sidenav {
   margin-top: 0; 
   -webkit-transition: margin-top .2s ease-in-out;
@@ -22,9 +43,10 @@
   transition: margin-top .2s ease-in-out;
 } 
 
-.uk-navbar .uk-navbar-nav > li > a.ticket {
+.uk-navbar .uk-navbar-nav > li.ticket > a {
   padding-right: 14px;
   background-color: #56085e;
+  border: 1px solid;
   border-radius: 3px;
   color: #ff4450;
   text-transform: uppercase;
@@ -35,13 +57,13 @@
   transition: all .2s linear;
 }
 
-.uk-navbar .uk-navbar-nav > li > a.ticket:hover {
+.uk-navbar .uk-navbar-nav > li.ticket > a:hover {
   padding-right: 14px;
-  background-color: #826087;
-  box-shadow: 0 1px 10px #ff4450 inset;
+  background-color: #ff4450;
+  /*box-shadow: 0 1px 10px #ff4450 inset;*/
   color: #fff;
   text-transform: uppercase;
-  text-shadow: 0 0 2px #fff;
+  /*text-shadow: 0 0 2px #fff;*/
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 16px;
   -moz-transition: all .2s linear;
@@ -49,8 +71,5 @@
   transition: all .2s linear;
 }
 
-.mejs-container {
-  margin: 0 auto;
-}
 
 
